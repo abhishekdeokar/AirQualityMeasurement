@@ -1,0 +1,153 @@
+
+#ifndef ATMO_PROPERTIES_H
+#define ATMO_PROPERTIES_H
+
+#ifdef __cplusplus
+	extern "C"{
+#endif
+
+#define ATMO_PROPERTY(ELEMENT, NAME) ATMO_ ## ELEMENT ## _PROPERTY_  ## NAME
+
+#define ATMO_AirQualityCharacteristic_PROPERTY_errorData NULL
+#define ATMO_AirQualityCharacteristic_PROPERTY_codeUserChanged NULL
+#define ATMO_AirQualityCharacteristic_PROPERTY_instance ATMO_DRIVERINSTANCE_BLE_BLE1
+#define ATMO_AirQualityCharacteristic_PROPERTY_bleServiceUuid "1493dd8e-8c3e-4e74-a4ff-6f0cd50005f9"
+#define ATMO_AirQualityCharacteristic_PROPERTY_bleCharacteristicUuid "1493dd8e-8c3e-4e75-a4ff-6f0cd50005f9"
+#define ATMO_AirQualityCharacteristic_PROPERTY_read true
+#define ATMO_AirQualityCharacteristic_PROPERTY_write true
+#define ATMO_AirQualityCharacteristic_PROPERTY_notify true
+#define ATMO_AirQualityCharacteristic_PROPERTY_readDataType ATMO_DATATYPE_UNSIGNED_INT
+#define ATMO_AirQualityCharacteristic_PROPERTY_writeDataType ATMO_DATATYPE_UNSIGNED_INT
+#define ATMO_AirQualityCharacteristic_PROPERTY_notifyDataType ATMO_DATATYPE_UNSIGNED_INT
+
+#define ATMO_SX9500Touch_PROPERTY_errorData NULL
+#define ATMO_SX9500Touch_PROPERTY_codeUserChanged NULL
+#define ATMO_SX9500Touch_PROPERTY_i2cInstance 1
+#define ATMO_SX9500Touch_PROPERTY_gpioInstance 0
+#define ATMO_SX9500Touch_PROPERTY_interruptEnabled true
+#define ATMO_SX9500Touch_PROPERTY_interruptGpio PTA9
+#define ATMO_SX9500Touch_PROPERTY_i2cAddress 0x28
+
+#define ATMO_EmbeddedPageController_PROPERTY_errorData NULL
+#define ATMO_EmbeddedPageController_PROPERTY_codeUserChanged NULL
+#define ATMO_EmbeddedPageController_PROPERTY_upDownNavigationLabelsEnabled true
+#define ATMO_EmbeddedPageController_PROPERTY_leftRightNavigationLabelsEnabled true
+
+#define ATMO_AirQuality_Pag_PROPERTY_errorData NULL
+#define ATMO_AirQuality_Pag_PROPERTY_codeUserChanged NULL
+#define ATMO_AirQuality_Pag_PROPERTY_textColor GUI_BLACK
+#define ATMO_AirQuality_Pag_PROPERTY_pageTitle "Air TVOC"
+#define ATMO_AirQuality_Pag_PROPERTY_titleHidden false
+#define ATMO_AirQuality_Pag_PROPERTY_pageHidden false
+#define ATMO_AirQuality_Pag_PROPERTY_topRightButtonLabel ""
+#define ATMO_AirQuality_Pag_PROPERTY_topRightButtonEnabled false
+#define ATMO_AirQuality_Pag_PROPERTY_bottomRightButtonLabel ""
+#define ATMO_AirQuality_Pag_PROPERTY_bottomRightButtonEnabled false
+#define ATMO_AirQuality_Pag_PROPERTY_topLeftButtonLabel ""
+#define ATMO_AirQuality_Pag_PROPERTY_topLeftButtonEnabled false
+#define ATMO_AirQuality_Pag_PROPERTY_bottomLeftButtonLabel ""
+#define ATMO_AirQuality_Pag_PROPERTY_bottomLeftButtonEnabled false
+#define ATMO_AirQuality_Pag_PROPERTY_x 4
+#define ATMO_AirQuality_Pag_PROPERTY_y 0
+#define ATMO_AirQuality_Pag_PROPERTY_spanX 1
+#define ATMO_AirQuality_Pag_PROPERTY_spanY 1
+#define ATMO_AirQuality_Pag_PROPERTY_icon icon_applications_airq
+#define ATMO_AirQuality_Pag_PROPERTY_label ""
+
+#define ATMO_Interval_PROPERTY_errorData NULL
+#define ATMO_Interval_PROPERTY_codeUserChanged NULL
+#define ATMO_Interval_PROPERTY_instance ATMO_DRIVERINSTANCE_INTERVAL_INTERVAL1
+#define ATMO_Interval_PROPERTY_time 10000
+
+#define ATMO_GetAirQualityStr_PROPERTY_errorData NULL
+#define ATMO_GetAirQualityStr_PROPERTY_codeUserChanged NULL
+
+#define ATMO_CCS811AirQuality_PROPERTY_errorData NULL
+#define ATMO_CCS811AirQuality_PROPERTY_codeUserChanged NULL
+#define ATMO_CCS811AirQuality_PROPERTY_i2cInstance 1
+#define ATMO_CCS811AirQuality_PROPERTY_i2cAddress 0x5A
+#define ATMO_CCS811AirQuality_PROPERTY_operatingMode 1
+
+#define ATMO_GetCO2Str_PROPERTY_errorData NULL
+#define ATMO_GetCO2Str_PROPERTY_codeUserChanged NULL
+
+#define ATMO_CCS811AirQuality1_PROPERTY_errorData NULL
+#define ATMO_CCS811AirQuality1_PROPERTY_codeUserChanged NULL
+#define ATMO_CCS811AirQuality1_PROPERTY_i2cInstance 1
+#define ATMO_CCS811AirQuality1_PROPERTY_i2cAddress 0x5A
+#define ATMO_CCS811AirQuality1_PROPERTY_operatingMode 1
+
+#define ATMO_CO2_Pag_PROPERTY_errorData NULL
+#define ATMO_CO2_Pag_PROPERTY_codeUserChanged NULL
+#define ATMO_CO2_Pag_PROPERTY_textColor GUI_BLACK
+#define ATMO_CO2_Pag_PROPERTY_pageTitle "CO2 Level"
+#define ATMO_CO2_Pag_PROPERTY_titleHidden false
+#define ATMO_CO2_Pag_PROPERTY_pageHidden false
+#define ATMO_CO2_Pag_PROPERTY_topRightButtonLabel ""
+#define ATMO_CO2_Pag_PROPERTY_topRightButtonEnabled false
+#define ATMO_CO2_Pag_PROPERTY_bottomRightButtonLabel ""
+#define ATMO_CO2_Pag_PROPERTY_bottomRightButtonEnabled false
+#define ATMO_CO2_Pag_PROPERTY_topLeftButtonLabel ""
+#define ATMO_CO2_Pag_PROPERTY_topLeftButtonEnabled false
+#define ATMO_CO2_Pag_PROPERTY_bottomLeftButtonLabel ""
+#define ATMO_CO2_Pag_PROPERTY_bottomLeftButtonEnabled false
+#define ATMO_CO2_Pag_PROPERTY_x 5
+#define ATMO_CO2_Pag_PROPERTY_y 0
+#define ATMO_CO2_Pag_PROPERTY_spanX 1
+#define ATMO_CO2_Pag_PROPERTY_spanY 1
+#define ATMO_CO2_Pag_PROPERTY_icon icon_applications_airq
+#define ATMO_CO2_Pag_PROPERTY_label "\"n/a\""
+
+#define ATMO_CO2Characteristic_PROPERTY_errorData NULL
+#define ATMO_CO2Characteristic_PROPERTY_codeUserChanged NULL
+#define ATMO_CO2Characteristic_PROPERTY_instance ATMO_DRIVERINSTANCE_BLE_BLE1
+#define ATMO_CO2Characteristic_PROPERTY_bleServiceUuid "0fa3c9f1-96a2-4d4c-b149-8d764a904a8f"
+#define ATMO_CO2Characteristic_PROPERTY_bleCharacteristicUuid "0fa3c9f1-96a2-4d4c-b149-8d764a904a90"
+#define ATMO_CO2Characteristic_PROPERTY_read true
+#define ATMO_CO2Characteristic_PROPERTY_write true
+#define ATMO_CO2Characteristic_PROPERTY_notify true
+#define ATMO_CO2Characteristic_PROPERTY_readDataType ATMO_DATATYPE_UNSIGNED_INT
+#define ATMO_CO2Characteristic_PROPERTY_writeDataType ATMO_DATATYPE_UNSIGNED_INT
+#define ATMO_CO2Characteristic_PROPERTY_notifyDataType ATMO_DATATYPE_STRING
+
+#define ATMO_EmbeddedNxpRpkUserButtons_PROPERTY_errorData NULL
+#define ATMO_EmbeddedNxpRpkUserButtons_PROPERTY_codeUserChanged NULL
+#define ATMO_EmbeddedNxpRpkUserButtons_PROPERTY_enableResetCombo true
+#define ATMO_EmbeddedNxpRpkUserButtons_PROPERTY_enableDisplayToggleCombo true
+
+#define ATMO_EmbeddedNxpRpkBacklight_PROPERTY_errorData NULL
+#define ATMO_EmbeddedNxpRpkBacklight_PROPERTY_codeUserChanged NULL
+#define ATMO_EmbeddedNxpRpkBacklight_PROPERTY_initialSetting BLIGHT_LEVEL_LOW
+
+#define ATMO_Interval1_PROPERTY_errorData NULL
+#define ATMO_Interval1_PROPERTY_codeUserChanged NULL
+#define ATMO_Interval1_PROPERTY_instance ATMO_DRIVERINSTANCE_INTERVAL_INTERVAL1
+#define ATMO_Interval1_PROPERTY_time 20000
+
+#define ATMO_EmbeddedComparison_PROPERTY_errorData NULL
+#define ATMO_EmbeddedComparison_PROPERTY_codeUserChanged NULL
+#define ATMO_EmbeddedComparison_PROPERTY_condition ATMO_GREATER_THAN
+#define ATMO_EmbeddedComparison_PROPERTY_target "1000"
+
+#define ATMO_EmbeddedNxpRpkRgbLed_PROPERTY_errorData NULL
+#define ATMO_EmbeddedNxpRpkRgbLed_PROPERTY_codeUserChanged NULL
+
+#define ATMO_EmbeddedComparison1_PROPERTY_errorData NULL
+#define ATMO_EmbeddedComparison1_PROPERTY_codeUserChanged NULL
+#define ATMO_EmbeddedComparison1_PROPERTY_condition ATMO_GREATER_THAN
+#define ATMO_EmbeddedComparison1_PROPERTY_target "325"
+
+#define ATMO_EmbeddedNxpRpkRgbLed1_PROPERTY_errorData NULL
+#define ATMO_EmbeddedNxpRpkRgbLed1_PROPERTY_codeUserChanged NULL
+
+#define ATMO_Interval2_PROPERTY_errorData NULL
+#define ATMO_Interval2_PROPERTY_codeUserChanged NULL
+#define ATMO_Interval2_PROPERTY_instance ATMO_DRIVERINSTANCE_INTERVAL_INTERVAL1
+#define ATMO_Interval2_PROPERTY_time 10000
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

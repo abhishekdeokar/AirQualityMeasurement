@@ -1,0 +1,91 @@
+
+#ifndef ATMO_TRIGGER_HANDLER_H
+#define ATMO_TRIGGER_HANDLER_H
+
+#include "atmosphere_platform.h"
+#include "../atmo/core.h"
+
+#ifdef __cplusplus
+	extern "C"{
+#endif
+
+#define ATMO_TRIGGER(ELEMENT, NAME) ATMO_ ## ELEMENT ## _TRIGGER_  ## NAME
+
+void ATMO_TriggerHandler(unsigned int triggerHandleId, ATMO_Value_t *value);
+
+#define ATMO_AirQualityCharacteristic_TRIGGER_triggered 0x1
+#define ATMO_AirQualityCharacteristic_TRIGGER_written 0x2
+#define ATMO_AirQualityCharacteristic_TRIGGER_subscibed 0x3
+#define ATMO_AirQualityCharacteristic_TRIGGER_unsubscribed 0x4
+#define ATMO_SX9500Touch_TRIGGER_triggered 0x5
+#define ATMO_SX9500Touch_TRIGGER_touchDataRead 0x6
+#define ATMO_SX9500Touch_TRIGGER_upPressed 0x7
+#define ATMO_SX9500Touch_TRIGGER_downPressed 0x8
+#define ATMO_SX9500Touch_TRIGGER_leftPressed 0x9
+#define ATMO_SX9500Touch_TRIGGER_rightPressed 0xa
+#define ATMO_EmbeddedPageController_TRIGGER_triggered 0xb
+#define ATMO_EmbeddedPageController_TRIGGER_navigateUp 0xc
+#define ATMO_EmbeddedPageController_TRIGGER_navigateDown 0xd
+#define ATMO_EmbeddedPageController_TRIGGER_navigateLeft 0xe
+#define ATMO_EmbeddedPageController_TRIGGER_navigateRight 0xf
+#define ATMO_EmbeddedPageController_TRIGGER_processTopRightButton 0x10
+#define ATMO_EmbeddedPageController_TRIGGER_processBottomRightButton 0x11
+#define ATMO_EmbeddedPageController_TRIGGER_processTopLeftButton 0x12
+#define ATMO_EmbeddedPageController_TRIGGER_processBottomLeftButton 0x13
+#define ATMO_AirQuality_Pag_TRIGGER_triggered 0x14
+#define ATMO_AirQuality_Pag_TRIGGER_onDisplayed 0x15
+#define ATMO_AirQuality_Pag_TRIGGER_topRightButtonPressed 0x16
+#define ATMO_AirQuality_Pag_TRIGGER_bottomRightButtonPressed 0x17
+#define ATMO_AirQuality_Pag_TRIGGER_topLeftButtonPressed 0x18
+#define ATMO_AirQuality_Pag_TRIGGER_bottomLeftButtonPressed 0x19
+#define ATMO_AirQuality_Pag_TRIGGER_onLeave 0x1a
+#define ATMO_Interval_TRIGGER_triggered 0x1b
+#define ATMO_Interval_TRIGGER_interval 0x1c
+#define ATMO_GetAirQualityStr_TRIGGER_triggered 0x1d
+#define ATMO_CCS811AirQuality_TRIGGER_triggered 0x1e
+#define ATMO_CCS811AirQuality_TRIGGER_TVOCRead 0x1f
+#define ATMO_CCS811AirQuality_TRIGGER_CO2Read 0x20
+#define ATMO_GetCO2Str_TRIGGER_triggered 0x21
+#define ATMO_CCS811AirQuality1_TRIGGER_triggered 0x22
+#define ATMO_CCS811AirQuality1_TRIGGER_TVOCRead 0x23
+#define ATMO_CCS811AirQuality1_TRIGGER_CO2Read 0x24
+#define ATMO_CO2_Pag_TRIGGER_triggered 0x25
+#define ATMO_CO2_Pag_TRIGGER_onDisplayed 0x26
+#define ATMO_CO2_Pag_TRIGGER_topRightButtonPressed 0x27
+#define ATMO_CO2_Pag_TRIGGER_bottomRightButtonPressed 0x28
+#define ATMO_CO2_Pag_TRIGGER_topLeftButtonPressed 0x29
+#define ATMO_CO2_Pag_TRIGGER_bottomLeftButtonPressed 0x2a
+#define ATMO_CO2_Pag_TRIGGER_onLeave 0x2b
+#define ATMO_CO2Characteristic_TRIGGER_triggered 0x2c
+#define ATMO_CO2Characteristic_TRIGGER_written 0x2d
+#define ATMO_CO2Characteristic_TRIGGER_subscibed 0x2e
+#define ATMO_CO2Characteristic_TRIGGER_unsubscribed 0x2f
+#define ATMO_EmbeddedNxpRpkUserButtons_TRIGGER_triggered 0x30
+#define ATMO_EmbeddedNxpRpkUserButtons_TRIGGER_topRightPushed 0x31
+#define ATMO_EmbeddedNxpRpkUserButtons_TRIGGER_bottomRightPushed 0x32
+#define ATMO_EmbeddedNxpRpkUserButtons_TRIGGER_topLeftPushed 0x33
+#define ATMO_EmbeddedNxpRpkUserButtons_TRIGGER_bottomLeftPushed 0x34
+#define ATMO_EmbeddedNxpRpkBacklight_TRIGGER_triggered 0x35
+#define ATMO_EmbeddedNxpRpkBacklight_TRIGGER_backlightSet 0x36
+#define ATMO_Interval1_TRIGGER_triggered 0x37
+#define ATMO_Interval1_TRIGGER_interval 0x38
+#define ATMO_EmbeddedComparison_TRIGGER_triggered 0x39
+#define ATMO_EmbeddedComparison_TRIGGER_conditionTrue 0x3a
+#define ATMO_EmbeddedComparison_TRIGGER_conditionFalse 0x3b
+#define ATMO_EmbeddedComparison_TRIGGER_invalidType 0x3c
+#define ATMO_EmbeddedNxpRpkRgbLed_TRIGGER_triggered 0x3d
+#define ATMO_EmbeddedNxpRpkRgbLed_TRIGGER_brightnessSet 0x3e
+#define ATMO_EmbeddedNxpRpkRgbLed_TRIGGER_colorSet 0x3f
+#define ATMO_EmbeddedComparison1_TRIGGER_triggered 0x40
+#define ATMO_EmbeddedComparison1_TRIGGER_conditionTrue 0x41
+#define ATMO_EmbeddedComparison1_TRIGGER_conditionFalse 0x42
+#define ATMO_EmbeddedComparison1_TRIGGER_invalidType 0x43
+#define ATMO_EmbeddedNxpRpkRgbLed1_TRIGGER_triggered 0x44
+#define ATMO_EmbeddedNxpRpkRgbLed1_TRIGGER_brightnessSet 0x45
+#define ATMO_EmbeddedNxpRpkRgbLed1_TRIGGER_colorSet 0x46
+#define ATMO_Interval2_TRIGGER_triggered 0x47
+#define ATMO_Interval2_TRIGGER_interval 0x48
+#ifdef __cplusplus
+}
+#endif
+#endif
